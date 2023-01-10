@@ -1,0 +1,28 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+
+<script>
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+	
+	pincel.fillStyle = "red" //Característica
+	pincel.fillRect(0,0,600,400);
+
+	pincel.fillStyle = "blue" //Característica
+	pincel.fillRect(0,133,600,133);
+
+	pincel.fillStyle = "yellow";
+	pincel.beginPath();
+	pincel.moveTo(200,200);
+	pincel.lineTo(0,400);
+	pincel.lineTo(0,0);
+	pincel.fill();
+
+	//pincel.fillStyle = "white"
+	//pincel.beginPath();
+	//pincel.arc(300,200,100,0,2*3.1416);
+	//pincel.fill();
+
+</script>

@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINACION </h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function sorteo(n) {
+    return Math.round(Math.random()*n)
+    }
+
+    var n = parseInt(prompt("Ingrese un número para el sorteo"))
+
+    var numeroPensado = sorteo(n);
+
+    var intento = 3
+
+    var cont=1
+
+    while(cont <= intento){
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-" + n))
+
+        if (numeroPensado == numeroLanzado){
+            alert("usted acertó");
+            imprimir("Correcto el número era: " + numeroPensado)
+            break
+        }
+
+        else{
+            if (numeroLanzado > numeroPensado){
+                alert("usted erró, el número pensado era menor que tu número");
+            } 
+            else{
+                alert("usted erró, el número pensado era mayor que tu número");
+            }
+        }
+        cont++
+    }
+    if (numeroLanzado != numeroPensado){
+        imprimir("Lo siento no adivinaste, el número era: " + numeroPensado)
+    }
+
+    imprimir("Recarga la página :D")
+
+</script>

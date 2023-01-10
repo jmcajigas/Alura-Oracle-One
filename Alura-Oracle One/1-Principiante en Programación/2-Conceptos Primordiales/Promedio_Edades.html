@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<h1>Tabla de Multiplicar</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numper = prompt("Ingrese la cantidad de miembros")
+    var cont = 1
+    var totalEdades = 0
+    while(con <= numper) {
+        edad= parseInt(prompt("Ingrese la edad de la persona"))
+        totalEdades = totalEdades + edad
+        cont++
+    }
+
+    imprimir("La media de las edades es " + (totalEdades/numper))
+    imprimir("Fin")
+
+
+
+    
+</script>

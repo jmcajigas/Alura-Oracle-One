@@ -1,0 +1,45 @@
+<meta charset="UTF 8">
+
+<h1>IMC</h1>
+
+<script>
+
+	function saltodelinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltodelinea();
+	}
+
+function CalculoIMC(peso, altura){
+
+	return (peso /(altura*altura));
+
+}
+var nombre = prompt("Informe su nombre")
+var peso = prompt(nombre + ", Informe su peso")
+var altura = prompt(nombre + ", Informe su Altura")
+
+calimc=CalculoIMC(peso,altura)
+
+imprimir(nombre + ", su Índice de Masa Corporal es: " + calimc + " y está:")
+
+if (calimc < 18.5) {
+	imprimir("Abajo de lo recomendado")
+}
+if (calimc >= 18.5 && calimc < 25) {
+	imprimir("Normal")
+}
+if (calimc >= 25 && calimc < 30.5) {
+	imprimir("Considerado como sobrepeso")
+}
+if (calimc >= 30.5) {
+	imprimir("Considerado como obesidad")
+}
+
+
+</script>

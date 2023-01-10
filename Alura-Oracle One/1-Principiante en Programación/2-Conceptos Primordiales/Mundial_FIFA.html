@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<h1>Año Mundial de FIFA</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var anhoMundial = 1930
+
+    var lim= parseInt(prompt("Ingrese un año límite"))
+
+    if (lim < anhoMundial){
+        alert("Límite inferior")
+    }
+    else{
+        
+        while (anhoMundial <= lim){
+
+        imprimir("Hubo Mundial en "+ anhoMundial)
+        anhoMundial = anhoMundial + 4;
+        
+        }
+    }
+    
+</script>
